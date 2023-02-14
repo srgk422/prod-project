@@ -1,10 +1,10 @@
-import HTMLWebpackPlugin from 'html-webpack-plugin'
-import webpack from 'webpack'
-import { type BuildOptions } from './types/config'
-import MiniCssExtractPlugin from 'mini-css-extract-plugin'
-import ReactRefreshWebpackPlugin from '@pmmmwh/react-refresh-webpack-plugin'
+import HTMLWebpackPlugin from 'html-webpack-plugin';
+import webpack from 'webpack';
+import MiniCssExtractPlugin from 'mini-css-extract-plugin';
+import ReactRefreshWebpackPlugin from '@pmmmwh/react-refresh-webpack-plugin';
+import { type BuildOptions } from './types/config';
 
-export function buildPlugins ({
+export function buildPlugins({
   paths,
   isDev,
 }: BuildOptions): webpack.WebpackPluginInstance[] {

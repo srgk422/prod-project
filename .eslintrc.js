@@ -1,29 +1,28 @@
 module.exports = {
   env: {
     browser: true,
-    es2021: true
+    es2021: true,
   },
   extends: [
     'plugin:react/recommended',
-    'standard-with-typescript',
-		'plugin:@typescript-eslint/recommended-requiring-type-checking'
+    'airbnb',
   ],
   parser: '@typescript-eslint/parser',
   overrides: [{ files: ['*.ts', '*.tsx'] }],
   parserOptions: {
     ecmaFeatures: {
-      jsx: true
+      jsx: true,
     },
     ecmaVersion: 'latest',
     sourceType: 'module',
-    project: './tsconfig.json',
-		// tsconfigRootDir: './',
   },
   plugins: [
     'react',
-    '@typescript-eslint'
+    '@typescript-eslint',
+    'eslint-plugin-import',
   ],
   rules: {
+    'linebreak-style': 'off',
     'react/jsx-indent': [2, 2],
     'react/jsx-indent-props': [2, 2],
     indent: [2, 2],
@@ -38,19 +37,12 @@ module.exports = {
     'import/extensions': 'off',
     'import/no-extraneous-dependencies': 'off',
     'no-underscore-dangle': 'off',
-		'no-unused-vars': "off",
-    '@typescript-eslint/no-unused-vars': ['error', { "vars": "local" }],
-    "comma-dangle": "off",
-    "@typescript-eslint/comma-dangle":  ['error', 'always-multiline'],
-		"@typescript-eslint/strict-boolean-expressions": "off",
-		"@typescript-eslint/prefer-nullish-coalescing": "off",
-		"@typescript-eslint/member-delimiter-style": "off",
-		"@typescript-eslint/semi": "off",
-		"@typescript-eslint/explicit-function-return-type": "warn",
-		"@typescript-eslint/naming-convention": "off",
-		"@typescript-eslint/no-floating-promises": "warn"
+    'no-unused-vars': 'warn',
+    'comma-dangle': ['error', 'always-multiline'],
+    'import/order': 'off',
+    'no-return-await': 'warn',
   },
   globals: {
-    __IS_DEV__: true
-  }
-}
+    __IS_DEV__: true,
+  },
+};
