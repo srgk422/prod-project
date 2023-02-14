@@ -19,7 +19,7 @@ module.exports = {
   plugins: [
     'react',
     '@typescript-eslint',
-    'eslint-plugin-import',
+    'i18next',
   ],
   rules: {
     'linebreak-style': 'off',
@@ -41,6 +41,7 @@ module.exports = {
     'comma-dangle': ['error', 'always-multiline'],
     'import/order': 'off',
     'no-return-await': 'warn',
+    'i18next/no-literal-string': ['error', { markupOnly: true }],
   },
   globals: {
     __IS_DEV__: true,
