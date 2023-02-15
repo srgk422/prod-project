@@ -3,6 +3,17 @@ import { type BuildOptions } from './types/config';
 import type webpack from 'webpack';
 
 export function buildLoaders({ isDev }: BuildOptions): webpack.RuleSetRule[] {
+  const babelLoader = {
+    test: /\.(js | jsx | tsx)$/,
+    exclude: /node_modules/,
+    use: {
+      loader: 'babel-loader',
+      options: {
+        presets: ['@babel/preset-env'],
+      },
+    },
+  };
+
   const fileLoader = {
     test: /\.(png|jpe?g|gif)$/i,
     use: [
@@ -43,6 +54,7 @@ export function buildLoaders({ isDev }: BuildOptions): webpack.RuleSetRule[] {
   return [
     fileLoader,
     svgrLoader,
+    babelLoader,
     typescriptLoader,
     cssLoader,
   ];
