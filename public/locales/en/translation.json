@@ -1,4 +1,5 @@
 {
-	"testKey": "testKey",
-	"currentLang": "English"
+  "testKey": "testKey",
+  "currentLang": "English",
+  "notFoundPage": "Page not found"
 }
