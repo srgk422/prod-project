@@ -2,5 +2,7 @@
   "testKey": "тест",
   "currentLang": "Русский",
   "somekey": "",
-  "notFoundPage": "Страница не найдена"
+  "notFoundPage": "Страница не найдена",
+  "pageError": "На странице произошла ошибка",
+  "reloadPage": "Перезагрузить страницу"
 }

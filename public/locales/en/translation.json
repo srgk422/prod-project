@@ -1,5 +1,7 @@
 {
   "testKey": "testKey",
   "currentLang": "English",
-  "notFoundPage": "Page not found"
+  "notFoundPage": "Page not found",
+  "pageError": "A page error has occurred",
+  "reloadPage": "Reload page"
 }
