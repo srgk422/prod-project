@@ -1,6 +1,6 @@
 import { Suspense } from 'react';
 import { Navbar } from 'widgets/Navbar';
-import { SideBar } from 'widgets/SideBar';
+import { Sidebar } from 'widgets/Sidebar';
 import { useTheme } from './providers/ThemeProvider/lib/useTheme';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { AppRouter } from './providers/router/ui';
@@ -14,7 +14,7 @@ const App = () => {
       <Suspense fallback="">
         <Navbar />
         <div className="content-page">
-          <SideBar />
+          <Sidebar />
           <AppRouter />
         </div>
       </Suspense>

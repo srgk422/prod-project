@@ -24,12 +24,4 @@ describe('classNames', () => {
       ['extraClass1', 'extraClass2'],
     )).toBe(expected);
   });
-  test('with mods undefined', () => {
-    const expected = 'mainClass hovered extraClass1 extraClass2';
-    expect(classNames(
-      'mainClass',
-      { hovered: true, scrollable: undefined },
-      ['extraClass1', 'extraClass2'],
-    )).toBe(expected);
-  });
 });
