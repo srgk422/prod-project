@@ -1,6 +1,7 @@
 import { type FC } from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { AppLink } from 'shared/ui/AppLink/AppLink';
+import { useTranslation } from 'react-i18next';
 
 import cls from './Navbar.module.scss';
 
@@ -11,13 +12,15 @@ interface NavbarProps {
 export const Navbar: FC<NavbarProps> = (props) => {
   const { className } = props;
 
+  const { t } = useTranslation();
+
   return (
     <div className={classNames(cls.Navbar, {}, [className])}>
       <div className={cls.links}>
         <AppLink className={cls.mainLink} to="/">
-          Главная
+          {t('main')}
         </AppLink>
-        <AppLink to="/about">О сайте</AppLink>
+        <AppLink to="/about">{t('about')}</AppLink>
       </div>
     </div>
   );

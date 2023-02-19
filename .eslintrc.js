@@ -41,7 +41,7 @@ module.exports = {
     'comma-dangle': ['error', 'always-multiline'],
     'import/order': 'off',
     'no-return-await': 'warn',
-    'i18next/no-literal-string': ['error', { markupOnly: true }],
+    'i18next/no-literal-string': ['error', { markupOnly: true, ignoreAttribute: ['data-testid', 'to'] }],
     'max-len': ['error', { code: 120, ignoreComments: true }],
   },
   globals: {

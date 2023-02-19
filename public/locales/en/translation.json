@@ -3,5 +3,7 @@
   "currentLang": "English",
   "notFoundPage": "Page not found",
   "pageError": "A page error has occurred",
-  "reloadPage": "Reload page"
+  "reloadPage": "Reload page",
+  "main": "Main",
+  "about": "About"
 }

@@ -11,11 +11,7 @@ export const Loader: FC<LoaderProps> = (props) => {
 
   return (
     <div className={classNames('Loader', {}, [className])}>
-      <div className="lds-roller">
-        <div />
-        <div />
-        <div />
-        <div />
+      <div className="lds-ellipsis">
         <div />
         <div />
         <div />
