@@ -25,12 +25,12 @@ PrimaryDark.decorators = [
 export const Clear = Template.bind({});
 Clear.args = {
   children: 'Text',
-  theme: ButtonVariant.CLEAR,
+  variant: ButtonVariant.CLEAR,
 };
 export const ClearDark = Template.bind({});
 ClearDark.args = {
   children: 'Text',
-  theme: ButtonVariant.CLEAR,
+  variant: ButtonVariant.CLEAR,
 };
 ClearDark.decorators = [
   ThemeDecorator(Theme.DARK),
@@ -39,12 +39,12 @@ ClearDark.decorators = [
 export const Outline = Template.bind({});
 Outline.args = {
   children: 'Text',
-  theme: ButtonVariant.OUTLINE,
+  variant: ButtonVariant.OUTLINE,
 };
 export const OutlineDark = Template.bind({});
 OutlineDark.args = {
   children: 'Text',
-  theme: ButtonVariant.OUTLINE,
+  variant: ButtonVariant.OUTLINE,
 };
 OutlineDark.decorators = [
   ThemeDecorator(Theme.DARK),
