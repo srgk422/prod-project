@@ -16,9 +16,9 @@ export const LangSwitcher: FC<LangSwitcherProps> = (props) => {
   };
   return (
     <Button
-      variant={ButtonVariant.CLEAR}
-      onClick={toggle}
       className={classNames('', {}, [className])}
+      onClick={toggle}
+      variant={ButtonVariant.CLEAR}
     >
       {t('currentLang')}
     </Button>
