@@ -4,7 +4,7 @@ export function classNames(acl: string, mods: Mods = {}, additional: string[] = 
   return [
     acl,
     ...Object.entries(mods)
-      .filter(([className, value]) => Boolean(value))
+      .filter(([, value]) => Boolean(value))
       .map(([className]) => className),
     ...additional.filter(Boolean),
   ].join(' ');
