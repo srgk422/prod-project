@@ -6,5 +6,6 @@
   "reloadPage": "Reload page",
   "main": "Main",
   "about": "About",
-  "toggle": "Toggle"
+  "toggle": "Toggle",
+  "currentLangShort": "En"
 }

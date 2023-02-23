@@ -5,10 +5,11 @@ import { Button, ButtonVariant } from 'shared/ui/Button';
 
 interface LangSwitcherProps {
   className?: string;
+  isShort?: boolean;
 }
 
 export const LangSwitcher: FC<LangSwitcherProps> = (props) => {
-  const { className } = props;
+  const { className, isShort } = props;
 
   const { t, i18n } = useTranslation();
   const toggle = async () => {
@@ -20,7 +21,7 @@ export const LangSwitcher: FC<LangSwitcherProps> = (props) => {
       onClick={toggle}
       variant={ButtonVariant.CLEAR}
     >
-      {t('currentLang')}
+      {isShort ? t('currentLangShort') : t('currentLang')}
     </Button>
   );
 };

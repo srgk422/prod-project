@@ -7,5 +7,6 @@
   "reloadPage": "Перезагрузить страницу",
   "main": "Главная",
   "about": "О нас",
-  "toggle": "Переключать"
+  "toggle": "Переключать",
+  "currentLangShort": "Ру"
 }

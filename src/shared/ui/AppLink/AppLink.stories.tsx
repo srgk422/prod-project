@@ -30,12 +30,12 @@ PrimaryDark.decorators = [
 export const Secondary = Template.bind({});
 Secondary.args = {
   children: 'Text',
-  variant: AppLinkVariant.SECONDARY,
+  variant: AppLinkVariant.INVERTED,
 };
 export const SecondaryDark = Template.bind({});
 SecondaryDark.args = {
   children: 'Text',
-  variant: AppLinkVariant.SECONDARY,
+  variant: AppLinkVariant.INVERTED,
 };
 SecondaryDark.decorators = [
   ThemeDecorator(Theme.DARK),
