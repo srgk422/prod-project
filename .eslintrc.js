@@ -41,7 +41,7 @@ module.exports = {
     'import/no-extraneous-dependencies': 'off',
     'no-underscore-dangle': 'off',
     'no-unused-vars': 'off',
-    '@typescript-eslint/no-unused-vars': ['warn', { vars: 'local' }],
+    '@typescript-eslint/no-unused-vars': ['error', { vars: 'local' }],
     'comma-dangle': ['error', 'always-multiline'],
     'import/order': 'off',
     'no-return-await': 'warn',
