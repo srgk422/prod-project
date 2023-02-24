@@ -2,3 +2,5 @@
 node_modules
 .idea
 /storybook-static
+.loki/reports.html
+.loki/reports.json
