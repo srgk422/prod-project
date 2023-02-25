@@ -8,5 +8,6 @@
   "main": "Главная",
   "about": "О нас",
   "toggle": "Переключать",
-  "currentLangShort": "Ру"
+  "currentLangShort": "Ру",
+  "LogIn": "Войти"
 }

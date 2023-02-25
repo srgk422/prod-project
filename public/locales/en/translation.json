@@ -7,5 +7,6 @@
   "main": "Main",
   "about": "About",
   "toggle": "Toggle",
-  "currentLangShort": "En"
+  "currentLangShort": "En",
+  "LogIn": "LogIn"
 }
