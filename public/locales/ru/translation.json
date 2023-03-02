@@ -9,5 +9,6 @@
   "about": "О нас",
   "toggle": "Переключать",
   "currentLangShort": "Ру",
-  "LogIn": "Войти"
+  "login": "Имя пользователя",
+  "password": "Пароль"
 }

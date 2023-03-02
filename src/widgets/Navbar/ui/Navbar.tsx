@@ -2,7 +2,7 @@ import { useCallback, useState, type FC } from 'react';
 import { useTranslation } from 'react-i18next';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { Button, ButtonVariant } from 'shared/ui/Button';
-import { Modal } from 'shared/ui/Modal/Modal';
+import { LoginModal } from 'features/AuthByUserName';
 
 import cls from './Navbar.module.scss';
 
@@ -17,20 +17,23 @@ export const Navbar: FC<NavbarProps> = (props) => {
 
   const [isAuthOpened, setIsAuthOpened] = useState(false);
 
-  const onAuthToggle = useCallback(() => {
-    setIsAuthOpened((prev) => !prev);
+  const onCloseAuth = useCallback(() => {
+    setIsAuthOpened(false);
+  }, []);
+  const onShowAuth = useCallback(() => {
+    setIsAuthOpened(true);
   }, []);
 
   return (
     <div className={classNames(cls.Navbar, {}, [className])}>
       <div className={cls.links}>
         <Button
-          onClick={onAuthToggle}
+          onClick={onShowAuth}
           variant={ButtonVariant.CLEAR_INVERTED}
         >
           {t('LogIn')}
         </Button>
-        <Modal isOpened={isAuthOpened} onClose={onAuthToggle}>123</Modal>
+        <LoginModal isOpened={isAuthOpened} onClose={onCloseAuth} />
       </div>
     </div>
   );

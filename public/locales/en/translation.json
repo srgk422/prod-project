@@ -8,5 +8,6 @@
   "about": "About",
   "toggle": "Toggle",
   "currentLangShort": "En",
-  "LogIn": "LogIn"
+  "login": "Login",
+  "password": "Password"
 }
