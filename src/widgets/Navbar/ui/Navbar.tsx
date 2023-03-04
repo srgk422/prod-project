@@ -31,7 +31,7 @@ export const Navbar: FC<NavbarProps> = (props) => {
           onClick={onShowAuth}
           variant={ButtonVariant.CLEAR_INVERTED}
         >
-          {t('LogIn')}
+          {t('logIn')}
         </Button>
         <LoginModal isOpened={isAuthOpened} onClose={onCloseAuth} />
       </div>
