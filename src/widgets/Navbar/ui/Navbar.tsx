@@ -1,7 +1,7 @@
 import { useCallback, useState, type FC } from 'react';
 import { useTranslation } from 'react-i18next';
 import { classNames } from 'shared/lib/classNames/classNames';
-import { Button, ButtonVariant } from 'shared/ui/Button';
+import { Button, ButtonDesign } from 'shared/ui/Button';
 import { LoginModal } from 'features/AuthByUserName';
 
 import cls from './Navbar.module.scss';
@@ -28,8 +28,8 @@ export const Navbar: FC<NavbarProps> = (props) => {
     <div className={classNames(cls.Navbar, {}, [className])}>
       <div className={cls.links}>
         <Button
+          design={ButtonDesign.CLEAR_INVERTED}
           onClick={onShowAuth}
-          variant={ButtonVariant.CLEAR_INVERTED}
         >
           {t('logIn')}
         </Button>

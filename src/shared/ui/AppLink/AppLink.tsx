@@ -3,7 +3,7 @@ import { Link, LinkProps } from 'react-router-dom';
 import { classNames } from 'shared/lib/classNames/classNames';
 import cls from './AppLink.module.scss';
 
-export enum AppLinkVariant {
+export enum AppLinkDesign {
   PRIMARY = 'primary',
   INVERTED = 'inverted',
   RED = 'red',
@@ -11,7 +11,7 @@ export enum AppLinkVariant {
 
 interface AppLinkProps extends LinkProps {
   className?: string;
-  variant?: AppLinkVariant;
+  design?: AppLinkDesign;
 }
 
 export const AppLink: FC<AppLinkProps> = (props) => {
@@ -19,12 +19,12 @@ export const AppLink: FC<AppLinkProps> = (props) => {
     children,
     className,
     to,
-    variant = AppLinkVariant.PRIMARY,
+    design = AppLinkDesign.PRIMARY,
     ...otherProps
   } = props;
 
   return (
-    <Link className={classNames(cls.AppLink, {}, [className, cls[variant]])} to={to} {...otherProps}>
+    <Link className={classNames(cls.AppLink, {}, [className, cls[design]])} to={to} {...otherProps}>
       {children}
     </Link>
   );

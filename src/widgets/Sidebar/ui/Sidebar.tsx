@@ -2,8 +2,8 @@ import { type FC, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { RoutePath } from 'shared/config/routeConfig/routeConfig';
 import { classNames } from 'shared/lib/classNames/classNames';
-import { AppLink, AppLinkVariant } from 'shared/ui/AppLink/AppLink';
-import { Button, ButtonVariant } from 'shared/ui/Button';
+import { AppLink, AppLinkDesign } from 'shared/ui/AppLink/AppLink';
+import { Button, ButtonDesign } from 'shared/ui/Button';
 import { ButtonSize } from 'shared/ui/Button/ui/Button';
 import { LangSwitcher } from 'widgets/LangSwitcher';
 import { ThemeSwitcher } from 'widgets/ThemeSwitcher';
@@ -33,16 +33,16 @@ export const Sidebar: FC<SidebarProps> = (props) => {
       <div className={cls.items}>
         <AppLink
           className={cls.item}
+          design={AppLinkDesign.INVERTED}
           to={RoutePath.main}
-          variant={AppLinkVariant.INVERTED}
         >
           <MainIcon className={cls.icon} />
           <span className={cls.link}>{t('main')}</span>
         </AppLink>
         <AppLink
           className={cls.item}
+          design={AppLinkDesign.INVERTED}
           to={RoutePath.about}
-          variant={AppLinkVariant.INVERTED}
         >
           <AboutIcon className={cls.icon} />
           <span className={cls.link}>{t('about')}</span>
@@ -55,11 +55,11 @@ export const Sidebar: FC<SidebarProps> = (props) => {
       <Button
         className={cls.collapseBtn}
         data-testid="Sidebar-toggle"
+        design={ButtonDesign.FILLED_INVERTED}
         onClick={toggle}
         size={ButtonSize.XL}
         square
         type="button"
-        variant={ButtonVariant.BACKGROUND_INVERTED}
       >
         {collapsed ? '>' : '<'}
       </Button>

@@ -2,9 +2,9 @@ import { type ButtonHTMLAttributes, type FC } from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
 import cls from './Button.module.scss';
 
-export enum ButtonVariant {
-  BACKGROUND = 'background',
-  BACKGROUND_INVERTED = 'background_inverted',
+export enum ButtonDesign {
+  FILLED = 'filled',
+  FILLED_INVERTED = 'filled_inverted',
   CLEAR = 'clear',
   CLEAR_INVERTED = 'clear_inverted',
   OUTLINE = 'outline',
@@ -20,7 +20,7 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   className?: string;
   size?: ButtonSize;
   square?: boolean;
-  variant?: ButtonVariant;
+  design?: ButtonDesign;
 }
 
 export const Button: FC<ButtonProps> = (props) => {
@@ -29,12 +29,12 @@ export const Button: FC<ButtonProps> = (props) => {
     className,
     size = ButtonSize.L,
     square,
-    variant,
+    design = ButtonDesign.OUTLINE,
     ...otherProps
   } = props;
 
   const mods: Record<string, boolean> = {
-    [cls[variant]]: true,
+    [cls[design]]: true,
     [cls[size]]: true,
     [cls.square]: square,
   };

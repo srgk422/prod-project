@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import { Button, ButtonVariant } from 'shared/ui/Button';
+import { Button, ButtonDesign } from 'shared/ui/Button';
 
 describe('renderButton', () => {
   test('renderButton without theme', () => {
@@ -7,8 +7,8 @@ describe('renderButton', () => {
     expect(screen.getByText('Test')).toBeInTheDocument();
   });
 
-  test('renderButton with ButtonVariant.CLEAR', () => {
-    render(<Button variant={ButtonVariant.CLEAR}>Test</Button>);
+  test('renderButton with ButtonDesign.CLEAR', () => {
+    render(<Button design={ButtonDesign.CLEAR}>Test</Button>);
     expect(screen.getByText('Test')).toBeInTheDocument();
     screen.debug();
   });

@@ -1,2 +1,2 @@
 export { Button } from './ui/Button';
-export { ButtonVariant } from './ui/Button';
+export { ButtonDesign } from './ui/Button';
