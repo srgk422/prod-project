@@ -1,6 +1,8 @@
 import { FC } from 'react';
 import { Modal } from 'shared/ui/Modal/Modal';
 import { LoginForm } from '../LofinForm/LoginForm';
+import { loginActions } from '../../model/slice/loginSlice';
+import { useDispatch } from 'react-redux';
 
 interface LoginModalProps {
   isOpened: boolean;
@@ -13,11 +15,18 @@ export const LoginModal: FC<LoginModalProps> = (props) => {
     onClose,
   } = props;
 
+  const dispatch = useDispatch();
+
+  const onCloseModal = () => {
+    dispatch(loginActions.resetError());
+    onClose();
+  };
+
   return (
     <Modal
       isOpened={isOpened}
       lazy
-      onClose={onClose}
+      onClose={onCloseModal}
     >
       <LoginForm />
     </Modal>

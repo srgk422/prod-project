@@ -5,6 +5,8 @@ import { Button, ButtonDesign } from 'shared/ui/Button';
 import { LoginModal } from 'features/AuthByUserName';
 
 import cls from './Navbar.module.scss';
+import { useDispatch, useSelector } from 'react-redux';
+import { getUserAuthData, userActions } from 'entities/User';
 
 interface NavbarProps {
   className?: string;
@@ -15,14 +17,37 @@ export const Navbar: FC<NavbarProps> = (props) => {
 
   const { t } = useTranslation();
 
+  const dispatch = useDispatch();
+
   const [isAuthOpened, setIsAuthOpened] = useState(false);
+  const authData = useSelector(getUserAuthData);
 
   const onCloseAuth = useCallback(() => {
     setIsAuthOpened(false);
   }, []);
+
   const onShowAuth = useCallback(() => {
     setIsAuthOpened(true);
   }, []);
+
+  const onLogout = useCallback(() => {
+    dispatch(userActions.logout());
+  }, [dispatch]);
+
+  if (authData) {
+    return (
+      <div className={classNames(cls.Navbar, {}, [className])}>
+        <div className={cls.links}>
+          <Button
+            design={ButtonDesign.CLEAR_INVERTED}
+            onClick={onLogout}
+          >
+            {t('logOut')}
+          </Button>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className={classNames(cls.Navbar, {}, [className])}>

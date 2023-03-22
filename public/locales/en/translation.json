@@ -10,5 +10,8 @@
   "currentLangShort": "En",
   "login": "Login",
   "logIn": "Log in",
-  "password": "Password"
+  "password": "Password",
+  "loginFormTitle": "Authorization form",
+  "authError": "Wrong login or password",
+  "logOut": "Logout"
 }

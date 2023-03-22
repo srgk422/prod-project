@@ -11,5 +11,8 @@
   "currentLangShort": "Ру",
   "logIn": "Войти",
   "login": "Имя пользователя",
-  "password": "Пароль"
+  "password": "Пароль",
+  "loginFormTitle": "Форма авторизации",
+  "authError": "Неверный логин или пароль",
+  "logOut": "Выйти"
 }

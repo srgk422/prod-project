@@ -99,3 +99,10 @@ SquareXL.args = {
   square: true,
   design: ButtonDesign.FILLED_INVERTED,
 };
+
+export const Disabled = Template.bind({});
+Disabled.args = {
+  children: 'Text',
+  disabled: true,
+  design: ButtonDesign.OUTLINE,
+};

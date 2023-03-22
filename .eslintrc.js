@@ -50,7 +50,7 @@ module.exports = {
     'no-return-await': 'warn',
     'i18next/no-literal-string': ['error', { markupOnly: true, ignoreAttribute: ['data-testid', 'to'] }],
     'max-len': ['error', { code: 120, ignoreComments: true }],
-    'sort-keys': ['warn', 'asc', { caseSensitive: true, natural: false, minKeys: 2 }],
+    // 'sort-keys': ['warn', 'asc', { caseSensitive: true, natural: false, minKeys: 2 }],
     // FIXME переделать в Modal клики на div, чтобы не было неоходимости в этих правилах
     'jsx-a11y/click-events-have-key-events': 'off',
     'jsx-a11y/no-static-element-interactions': 'off',
