@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import { Modal } from 'shared/ui/Modal/Modal';
-import { LoginForm } from '../LofinForm/LoginForm';
+import { LoginForm } from '../LoginForm/LoginForm';
 import { loginActions } from '../../model/slice/loginSlice';
 import { useDispatch } from 'react-redux';
 
