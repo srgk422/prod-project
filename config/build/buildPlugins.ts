@@ -23,10 +23,8 @@ export function buildPlugins({
     })];
 
   if (isDev) {
-    plugins.push(
-      new ReactRefreshWebpackPlugin({ overlay: false }),
-      new BundleAnalyzerPlugin({ openAnalyzer: false }),
-    );
+    plugins.push(new BundleAnalyzerPlugin({ openAnalyzer: false }));
+    plugins.push(new ReactRefreshWebpackPlugin({ overlay: false }));
   }
 
   return plugins;

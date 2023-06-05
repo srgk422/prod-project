@@ -24,7 +24,8 @@ module.exports = {
   ],
   rules: {
     'react-hooks/rules-of-hooks': 'error',
-    'react-hooks/exhaustive-deps': 'error',
+    'react-hooks/exhaustive-deps': 'warn',
+    'react/jsx-no-useless-fragment': 'off',
     'linebreak-style': 'off',
     'react/jsx-indent': [2, 2],
     'react/jsx-indent-props': [2, 2],
@@ -48,6 +49,7 @@ module.exports = {
     'comma-dangle': ['error', 'always-multiline'],
     'import/order': 'off',
     'no-return-await': 'warn',
+    // FIXME переделать правило, чтобы не было ворнингов на пропсы со строковыми значениями
     'i18next/no-literal-string': ['error', { markupOnly: true, ignoreAttribute: ['data-testid', 'to'] }],
     'max-len': ['error', { code: 120, ignoreComments: true }],
     // 'sort-keys': ['warn', 'asc', { caseSensitive: true, natural: false, minKeys: 2 }],
@@ -56,7 +58,6 @@ module.exports = {
     'jsx-a11y/no-static-element-interactions': 'off',
     'no-param-reassign': 'off',
     'jsx-a11y/label-has-associated-control': 'off',
-
   },
   globals: {
     __IS_DEV__: true,

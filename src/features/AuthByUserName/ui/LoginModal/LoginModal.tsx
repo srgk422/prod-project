@@ -1,8 +1,9 @@
-import { FC } from 'react';
+import { FC, Suspense } from 'react';
 import { Modal } from 'shared/ui/Modal/Modal';
-import { LoginForm } from '../LoginForm/LoginForm';
+import { LoginFormLazy } from '../LoginForm/LoginForm.async';
 import { loginActions } from '../../model/slice/loginSlice';
 import { useDispatch } from 'react-redux';
+import { Loader } from 'shared/ui/Loader/Loader';
 
 interface LoginModalProps {
   isOpened: boolean;
@@ -28,7 +29,9 @@ export const LoginModal: FC<LoginModalProps> = (props) => {
       lazy
       onClose={onCloseModal}
     >
-      <LoginForm />
+      <Suspense fallback={<Loader />}>
+        <LoginFormLazy />
+      </Suspense>
     </Modal>
   );
 };
