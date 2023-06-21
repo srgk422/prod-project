@@ -21,7 +21,7 @@ export const loginByUsername = createAsyncThunk<User, LoginByUserNameProps, {rej
       // возвращаемое значение доступно в loginSlice > extraReducers > loginByUserName.fulfilled > action.payload
       return response.data;
     } catch (error) {
-      console.error(error);
+      console.log(error);
       // возвращаемое значение доступно в loginSlice > extraReducers > loginByUserName.rejected > action.payload
       return thunkAPI.rejectWithValue('error');
     }
