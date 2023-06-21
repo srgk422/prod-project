@@ -6,7 +6,7 @@ import { Button, ButtonDesign } from 'shared/ui/Button';
 import { Input } from 'shared/ui/Input/Input';
 import cls from './LoginForm.module.scss';
 import { loginActions, loginReducer } from '../../model/slice/loginSlice';
-import { loginByUserName } from '../../model/services/loginByUserName/loginByUserName';
+import { loginByUsername } from '../../model/services/loginByUserName/loginByUsername';
 import { Text, TextDesign } from 'shared/ui/Text/Text';
 import {
   getLoginError, getLoginIsLoading, getLoginPassword, getLoginUsername,
@@ -41,7 +41,7 @@ const LoginForm = memo((props: LoginFormProps) => {
   }, [dispatch]);
 
   const onLoginClick = useCallback(() => {
-    dispatch(loginByUserName({ username, password }));
+    dispatch(loginByUsername({ username, password }));
   }, [dispatch, password, username]);
 
   return (

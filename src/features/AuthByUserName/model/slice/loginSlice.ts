@@ -1,5 +1,5 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { loginByUserName } from '../services/loginByUserName/loginByUserName';
+import { loginByUsername } from '../services/loginByUserName/loginByUsername';
 import { LoginSchema } from '../types/loginSchema';
 
 const initialState: LoginSchema = {
@@ -23,16 +23,18 @@ export const loginSlice = createSlice({
       state.error = undefined;
     },
   },
+  // редьюссер для async thunk
   extraReducers: (builder) => {
     builder
-      .addCase(loginByUserName.pending, (state) => {
+      .addCase(loginByUsername.pending, (state) => {
         state.isLoading = true;
         state.error = undefined;
       })
-      .addCase(loginByUserName.fulfilled, (state) => {
+      .addCase(loginByUsername.fulfilled, (state, action) => {
+        console.log('fulfilled', action.payload);
         state.isLoading = false;
       })
-      .addCase(loginByUserName.rejected, (state, action) => {
+      .addCase(loginByUsername.rejected, (state, action) => {
         state.isLoading = false;
         state.error = action.payload;
       });

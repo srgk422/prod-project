@@ -8,7 +8,7 @@ interface LoginByUserNameProps {
   password: string;
 }
 
-export const loginByUserName = createAsyncThunk<User, LoginByUserNameProps, {rejectValue: string}>(
+export const loginByUsername = createAsyncThunk<User, LoginByUserNameProps, {rejectValue: string}>(
   'login/loginByUserName',
   async (authData, thunkAPI) => {
     try {
@@ -18,9 +18,11 @@ export const loginByUserName = createAsyncThunk<User, LoginByUserNameProps, {rej
       localStorage.setItem(USER_LOCALSTORAGE_KEY, JSON.stringify(response.data));
       thunkAPI.dispatch(userActions.setAuthData(response.data));
 
+      // возвращаемое значение доступно в loginSlice > extraReducers > loginByUserName.fulfilled > action.payload
       return response.data;
     } catch (error) {
-      console.log('>>> error:', error);
+      console.error(error);
+      // возвращаемое значение доступно в loginSlice > extraReducers > loginByUserName.rejected > action.payload
       return thunkAPI.rejectWithValue('error');
     }
   },
