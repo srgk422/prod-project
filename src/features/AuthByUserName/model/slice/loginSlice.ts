@@ -23,6 +23,7 @@ export const loginSlice = createSlice({
       state.error = undefined;
     },
   },
+  // редьюссер для async thunk
   extraReducers: (builder) => {
     builder
       .addCase(loginByUserName.pending, (state) => {

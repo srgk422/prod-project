@@ -1,4 +1,4 @@
-export { getLoginError } from './getLoginError';
-export { getLoginIsLoading } from './getLoginIsLoading';
-export { getLoginPassword } from './getLoginPassword';
-export { getLoginUsername } from './getLoginUsername';
+export { getLoginError } from './getLoginError/getLoginError';
+export { getLoginIsLoading } from './getLoginIsLoading/getLoginIsLoading';
+export { getLoginPassword } from './getLoginPassword/getLoginPassword';
+export { getLoginUsername } from './getLoginUsername/getLoginUsername';

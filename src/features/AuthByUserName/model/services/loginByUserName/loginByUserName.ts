@@ -18,9 +18,11 @@ export const loginByUserName = createAsyncThunk<User, LoginByUserNameProps, {rej
       localStorage.setItem(USER_LOCALSTORAGE_KEY, JSON.stringify(response.data));
       thunkAPI.dispatch(userActions.setAuthData(response.data));
 
+      // возвращаемое значение доступно в loginSlice > extraReducers > loginByUsername.fulfilled > action.payload
       return response.data;
     } catch (error) {
-      console.log('>>> error:', error);
+      console.log(error);
+      // возвращаемое значение доступно в loginSlice > extraReducers > loginByUsername.rejected > action.payload
       return thunkAPI.rejectWithValue('error');
     }
   },
