@@ -6,11 +6,11 @@ import { Button, ButtonDesign } from 'shared/ui/Button';
 import { Input } from 'shared/ui/Input/Input';
 import cls from './LoginForm.module.scss';
 import { loginActions, loginReducer } from '../../model/slice/loginSlice';
-import { loginByUsername } from '../../model/services/loginByUserName/loginByUsername';
+import { loginByUsername } from '../../model/services/loginByUsername/loginByUsername';
 import { Text, TextDesign } from 'shared/ui/Text/Text';
 import {
   getLoginError, getLoginIsLoading, getLoginPassword, getLoginUsername,
-} from 'features/AuthByUserName/model/selectors';
+} from 'features/AuthByUsername/model/selectors';
 import { DynamicModuleLoader, ReducersList } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 
 export interface LoginFormProps {

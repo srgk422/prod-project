@@ -2,7 +2,7 @@ import { useCallback, useState, type FC } from 'react';
 import { useTranslation } from 'react-i18next';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { Button, ButtonDesign } from 'shared/ui/Button';
-import { LoginModal } from 'features/AuthByUserName';
+import { LoginModal } from 'features/AuthByUsername';
 
 import cls from './Navbar.module.scss';
 import { useDispatch, useSelector } from 'react-redux';
