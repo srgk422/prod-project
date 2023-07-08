@@ -1,0 +1,33 @@
+.item {
+	margin-top: 10px;
+	display: flex;
+	align-items: center;
+}
+
+.icon {
+	margin-left: 24px;
+	margin-right: 8px;
+	fill: var(--inverted-primary-color);
+	height: 32px !important;
+	width: 32px !important;
+}
+
+.link {
+	font-size: var(--font-size-l);
+	line-height: var(--font-line-l);
+	width: auto;
+	transition: all 0.2s;
+
+	// font: var(--font-size-xl);
+}
+
+.collapsed {
+	width: var(--sidebar-width-collapsed);
+
+	.link {
+		opacity: 0;
+		transition: all 0.2s;
+		display: inline-block;
+		width: 0;
+	}
+}

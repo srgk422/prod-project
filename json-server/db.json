@@ -25,5 +25,14 @@
       "password": "123"
     }
   ],
-  "profile": { "name": "typicode" }
+  "profile": { 
+    "firstName": "Сергей",
+    "lastName": "Фронтмен",
+    "age": "30",
+    "currency": "rub",
+    "country": "Россия",
+    "city": "Москва",
+    "username": "Pro100bro",
+    "avatar": "https://www.websiteplanet.com/blog/make-an-avatar/"
+  }
 }

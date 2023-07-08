@@ -13,5 +13,6 @@
   "password": "Password",
   "loginFormTitle": "Authorization form",
   "authError": "Wrong login or password",
-  "logOut": "Logout"
+  "logOut": "Logout",
+  "profile": "Profile"
 }

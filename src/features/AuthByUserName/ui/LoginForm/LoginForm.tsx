@@ -1,4 +1,4 @@
-import { memo, useCallback } from 'react';
+import { memo, useCallback, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
 import { classNames } from 'shared/lib/classNames/classNames';
@@ -48,6 +48,17 @@ const LoginForm = memo((props: LoginFormProps) => {
       onSuccess();
     }
   }, [dispatch, onSuccess, password, username]);
+
+  useEffect(() => {
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Enter') onLoginClick();
+    };
+    window.addEventListener('keydown', onKeyDown);
+
+    return () => {
+      window.removeEventListener('keydown', onKeyDown);
+    };
+  }, [onLoginClick]);
 
   return (
     // eslint-disable-next-line i18next/no-literal-string
