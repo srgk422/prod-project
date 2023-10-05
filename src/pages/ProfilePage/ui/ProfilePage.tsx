@@ -26,4 +26,6 @@ const ProfilePage = memo((props: ProfilePageProps) => {
   );
 });
 
+ProfilePage.displayName = 'ProfilePage';
+
 export default ProfilePage;

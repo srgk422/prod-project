@@ -24,3 +24,5 @@ export const SidebarItem = memo(({ item, isCollapsed }: SidebarItemProps) => {
     </AppLink>
   );
 });
+
+SidebarItem.displayName = 'SidebarItem';

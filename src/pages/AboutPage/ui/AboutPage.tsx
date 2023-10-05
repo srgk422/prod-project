@@ -7,4 +7,6 @@ const AboutPage = memo(() => {
   return <div>{t('title')}</div>;
 });
 
+AboutPage.displayName = 'AboutPage';
+
 export default AboutPage;

@@ -12,4 +12,6 @@ const MainPage = memo(() => {
   );
 });
 
+MainPage.displayName = 'MainPage';
+
 export default MainPage;

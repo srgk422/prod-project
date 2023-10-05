@@ -22,4 +22,6 @@ const ThemeProvider: FC<ThemeProviderProps> = ({ children, initialTheme }) => {
   );
 };
 
+ThemeProvider.displayName = 'ThemeProvider';
+
 export default ThemeProvider;

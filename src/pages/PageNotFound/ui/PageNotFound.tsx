@@ -17,3 +17,5 @@ export const PageNotFound = memo((props: PageNotFoundProps) => {
     </div>
   );
 });
+
+PageNotFound.displayName = 'PageNotFound';

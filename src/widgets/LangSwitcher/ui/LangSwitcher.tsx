@@ -25,3 +25,5 @@ export const LangSwitcher = memo((props: LangSwitcherProps) => {
     </Button>
   );
 });
+
+LangSwitcher.displayName = 'LangSwitcher';

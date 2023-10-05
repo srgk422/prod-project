@@ -58,3 +58,5 @@ export const Input = memo((props: InputProps) => {
     </label>
   );
 });
+
+Input.displayName = 'Input';
