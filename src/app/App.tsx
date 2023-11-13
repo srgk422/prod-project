@@ -5,16 +5,18 @@ import { classNames } from 'shared/lib/classNames/classNames';
 import { AppRouter } from './providers/router/ui';
 import { useDispatch } from 'react-redux';
 import { userActions } from 'entities/User';
+import { useTheme } from './providers/ThemeProvider';
 
 const App = () => {
   const dispatch = useDispatch();
+  const { theme } = useTheme();
 
   useEffect(() => {
-    dispatch(userActions.setAuthData());
+    dispatch(userActions.initAuthData());
   }, [dispatch]);
 
   return (
-    <div className={classNames('app', {}, [])}>
+    <div className={classNames('app', {}, [theme])}>
       <Suspense fallback="">
         <Navbar />
         <div className="content-page">
