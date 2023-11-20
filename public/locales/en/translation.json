@@ -1,11 +1,12 @@
 {
+  "mainTab": "Main",
+  "aboutTab": "About project",
+  "profileTab": "Profile",
   "testKey": "testKey",
   "currentLang": "English",
   "notFoundPage": "Page not found",
   "pageError": "A page error has occurred",
   "reloadPage": "Reload page",
-  "main": "Main",
-  "about": "About",
   "toggle": "Toggle",
   "currentLangShort": "En",
   "login": "Login",
@@ -13,6 +14,5 @@
   "password": "Password",
   "loginFormTitle": "Authorization form",
   "authError": "Wrong login or password",
-  "logOut": "Logout",
-  "profile": "Profile"
+  "logOut": "Logout"
 }

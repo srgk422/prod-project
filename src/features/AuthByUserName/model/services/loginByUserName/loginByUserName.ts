@@ -23,6 +23,7 @@ export const loginByUserName = createAsyncThunk<User, LoginByUserNameProps, Thun
       // возвращаемое значение доступно в loginSlice > extraReducers > loginByUsername.fulfilled > action.payload
       return response.data;
     } catch (error) {
+      // eslint-disable-next-line no-console
       console.log(error);
       // возвращаемое значение доступно в loginSlice > extraReducers > loginByUsername.rejected > action.payload
       return rejectWithValue('error');

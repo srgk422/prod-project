@@ -1,12 +1,12 @@
 {
+  "mainTab": "Главная",
+  "aboutTab": "О проекте",
+  "profileTab": "Профиль",
   "testKey": "тест",
   "currentLang": "Русский",
-  "somekey": "",
   "notFoundPage": "Страница не найдена",
   "pageError": "На странице произошла ошибка",
   "reloadPage": "Перезагрузить страницу",
-  "main": "Главная",
-  "about": "О нас",
   "toggle": "Переключать",
   "currentLangShort": "Ру",
   "logIn": "Войти",
@@ -14,6 +14,5 @@
   "password": "Пароль",
   "loginFormTitle": "Форма авторизации",
   "authError": "Неверный логин или пароль",
-  "logOut": "Выйти",
-  "profile": "Профиль"
+  "logOut": "Выйти"
 }

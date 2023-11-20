@@ -15,17 +15,17 @@ export interface SidebarItemType {
 export const sidebarItemsList: SidebarItemType[] = [
   {
     path: RoutePath.main,
-    text: 'main',
+    text: 'mainTab',
     Icon: MainIcon,
   },
   {
     path: RoutePath.about,
-    text: 'about',
+    text: 'aboutTab',
     Icon: AboutIcon,
   },
   {
     path: RoutePath.profile,
-    text: 'profile',
+    text: 'profileTab',
     Icon: ProfileIcon,
   },
 ];
