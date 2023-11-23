@@ -44,9 +44,9 @@ describe('loginByUsername.test', () => {
 
   test('success login', async () => {
     const userValue = { username: '123', id: '1' };
-    mockedAxios.post.mockReturnValue(Promise.resolve({ data: userValue }));
 
     const thunk = new TestAsyncThunk(loginByUserName);
+    thunk.api.post.mockReturnValue(Promise.resolve({ data: userValue }));
     const result = await thunk.callThunk({ username: '123', password: '123' });
 
     expect(thunk.dispatch).toHaveBeenCalledWith(userActions.setAuthData(userValue));

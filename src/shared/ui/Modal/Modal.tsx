@@ -1,7 +1,7 @@
 import React, {
-  FC, ReactNode, useCallback, useEffect, useRef, useState,
+  FC, MutableRefObject, ReactNode, useCallback, useEffect, useRef, useState,
 } from 'react';
-import { classNames } from 'shared/lib/classNames/classNames';
+import { Mods, classNames } from 'shared/lib/classNames/classNames';
 import { Portal } from 'shared/ui/Portal/Portal';
 
 import cls from './Modal.module.scss';
@@ -9,8 +9,8 @@ import { useTheme } from 'app/providers/ThemeProvider';
 
 export interface ModalProps {
   className?: string;
-  children: ReactNode;
-  isOpened: boolean;
+  children?: ReactNode;
+  isOpened?: boolean;
   onClose?: () => void;
   lazy?: boolean;
 }
@@ -30,9 +30,9 @@ export const Modal: FC<ModalProps> = (props) => {
 
   const [isClosing, setIsClosing] = useState(false);
   const [isMounted, setIsMounted] = useState(false);
-  const timerRef = useRef<ReturnType<typeof setTimeout>>();
+  const timerRef = useRef() as MutableRefObject<ReturnType<typeof setTimeout>>;
 
-  const mods: Record<string, boolean> = {
+  const mods: Mods = {
     [cls.opened]: isOpened,
     [cls.closing]: isClosing,
     [cls[theme]]: true,

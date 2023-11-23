@@ -1,5 +1,5 @@
 import { memo, type ButtonHTMLAttributes, ReactNode } from 'react';
-import { classNames } from 'shared/lib/classNames/classNames';
+import { Mods, classNames } from 'shared/lib/classNames/classNames';
 import cls from './Button.module.scss';
 
 export enum ButtonDesign {
@@ -36,7 +36,7 @@ export const Button = memo((props: ButtonProps) => {
     ...otherProps
   } = props;
 
-  const mods: Record<string, boolean> = {
+  const mods: Mods = {
     [cls[design]]: true,
     [cls[size]]: true,
     [cls.square]: square,

@@ -58,6 +58,7 @@ module.exports = {
     'jsx-a11y/no-static-element-interactions': 'off',
     'no-param-reassign': 'off',
     'jsx-a11y/label-has-associated-control': 'off',
+    'no-undef': 'off',
   },
   globals: {
     __IS_DEV__: true,
